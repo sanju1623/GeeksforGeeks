@@ -1,0 +1,32 @@
+import java.util.*;
+
+
+public class HelloWorld{
+
+//approach :- store the charecters in list and iterate the list.
+
+
+     public static void main(String []args){
+       String input="a.AS.!!sda.!@";
+       List<Character>temp=new ArrayList<>();
+       
+       for(int i=0;i<input.length();i++){
+           if(Character.isAlphabetic(input.charAt(i))){
+           temp.add(input.charAt(i));
+        }
+       }
+       Collections.reverse(temp);
+       int stringLength=input.length()-1;
+       int p=0;
+       String output="";
+       for(int i=0;i<input.length();i++){
+           if(Character.isAlphabetic(input.charAt(i))){
+           output=output+temp.get(p++);
+           }else{
+               output=output+input.charAt(i);
+           }
+       }
+      
+        System.out.println(output);
+     }
+}
