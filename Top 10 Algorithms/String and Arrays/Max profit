@@ -1,0 +1,25 @@
+import java.util.*;
+
+
+public class HelloWorld{
+
+     public static void main(String []args){
+     int nums[] = new int[]{100, 180, 260, 310, 40, 535, 695};
+      
+      int tillnow=nums[0];
+      int output=Integer.MIN_VALUE;
+      for(int i=1;i<nums.length;i++){
+          if(nums[i]>tillnow){
+              output=Math.max(output,nums[i]-tillnow);
+          }else{
+              tillnow=nums[i];
+          }
+      }
+      
+      
+      
+      
+      System.out.println(output);
+      
+     }
+}
