@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+public class contiguous{
+
+     public static void main(String []args){
+     int nums[] = new int[]{1,3,41,51,62};
+      Arrays.sort(nums);
+      int count=0;
+      int output=Integer.MIN_VALUE;
+     for(int i=0;i+1<nums.length;i++){
+          if(nums[i]+1==nums[i+1])
+               {
+                   count++;
+               }   else{
+                   
+                   output=Math.max(output,count);
+                   count=0;
+               }
+     }
+     output=Math.max(output,count);
+   
+   System.out.println(output+1);
+       
+
+
+     
+     }
+}
