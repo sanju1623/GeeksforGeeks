@@ -1,0 +1,30 @@
+import java.util.*;
+
+//Smallest subarray with sum greater than a given value
+
+public class HelloWorld{
+
+     public static void main(String []args){
+     int nums[] = new int[]{1, 11, 100, 1, 0, 3, 2, 1, 250};
+      int p=280;
+      int output=Integer.MAX_VALUE;
+      int sum=0;
+      for(int i=0;i<nums.length;i++){
+          
+          sum=sum+nums[i];
+          if(sum>p){
+              int m=i,n=0;
+              while(m>=0){
+                  sum=sum-nums[n++];
+                  m--;
+                  if(sum>p)
+              output=Math.min(output,i-n+1);
+              }
+            sum=0;
+              
+          }
+      }
+      System.out.println(output);
+      
+     }
+}
