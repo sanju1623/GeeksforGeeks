@@ -1,0 +1,22 @@
+import java.util.*;
+
+//Find the smallest positive integer value that cannot be represented as sum of any subset of a given array
+public class HelloWorld{
+
+     public static void main(String []args){
+     int nums[] = new int[]{1,1,4,5,6};
+      Arrays.sort(nums);
+      int output=1;
+      for(int i=0;i<nums.length;i++){
+          if(nums[i]>output){
+              System.out.println(output);
+              break;
+          }else{
+              output=output+nums[i];
+          }
+      }
+      
+
+     
+     }
+}
