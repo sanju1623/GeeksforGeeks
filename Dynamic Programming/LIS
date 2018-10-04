@@ -1,0 +1,30 @@
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+       int output=0;
+        if(nums.length==0)
+            return output;
+        
+        //declare an extra array which stores maximum till its index.
+        int temp[]=new int[nums.length];
+       
+        
+        for(int i=1;i<nums.length;i++){    
+            for(int j=0;j<i;j++){
+                if(nums[i]>nums[j]){
+                    //update the temp with the maximum of two places.
+                    temp[i]=Math.max(temp[j]+1,temp[i]);
+                }
+            }
+        }
+        
+        
+        //find the maximum in the array
+        Arrays.sort(temp);
+        if(temp[temp.length-1]==0)
+            return output+1;
+        
+        
+        return temp[temp.length-1]+1;
+        
+    }
+}
