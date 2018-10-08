@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+
+       System.out.println(check("sanjayaghavendra"));
+     }
+     
+     public static char check(String k){
+         if(k.length()==0)
+         return 'q';
+         if(Character.isUpperCase(k.charAt(0)))
+         return k.charAt(0);
+         
+         return check(k.substring(1));
+     }
+     
+     
+}
