@@ -1,0 +1,28 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+ //logic:- track previous and k=1 remove the node.
+ 
+ 
+class Solution {
+    public ListNode middleNode(ListNode head) {
+      check(head,head,6);
+        return head;
+    }
+    
+    public void check(ListNode temp,ListNode temp1,int k){
+        if(k==1){
+          temp1.next=temp.next;
+          temp.next=null;
+          return; 
+       }
+        temp1=temp;
+        check(temp.next,temp1,k-1);
+    }
+    
+}
