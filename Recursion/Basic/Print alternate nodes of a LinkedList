@@ -1,0 +1,13 @@
+
+class Solution {
+    public ListNode plusOne(ListNode head) {
+        check(head);   
+    }
+    public void check(ListNode head){   
+        System.out.println(head.val);
+        if(head.next==null || head.next.next==null)
+            return ;
+        else
+         check(head.next.next);
+    }    
+}
