@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+
+       System.out.println(check("sanjayra"));
+     }
+     
+     public static int check(String k){
+    
+        if(k.length()==0)
+        return 0;
+        
+        return 1+check(k.substring(1));
+              
+         
+     }
+     
+     
+}
