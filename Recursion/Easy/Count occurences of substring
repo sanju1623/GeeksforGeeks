@@ -1,0 +1,22 @@
+public class MyClass {
+    public static void main(String args[]) {
+    
+    System.out.println(check("sanjuasddkjsanjuaksjd","sanju",0));
+    }
+    
+    public static int check(String temp1,String temp2,int count){
+        
+        if(temp1.length()<temp2.length()){
+            return count;
+        }
+        System.out.println(temp1.substring(0,temp2.length()));
+        if(temp1.substring(0,temp2.length()).equals(temp2)){
+            count++;
+        }
+        
+        return check(temp1.substring(1),temp2,count);
+        
+    }
+    
+    
+}
