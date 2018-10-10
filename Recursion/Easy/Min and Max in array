@@ -1,0 +1,24 @@
+import java.util.*; 
+import java.lang.*; 
+
+public class HelloWorld{
+     public static void main(String []args){
+           
+           int temp[]={2,4,23,124};
+           int out[]=new int[2];
+           out[0]=Integer.MAX_VALUE;
+           int output[]=check(temp,out,0);
+          System.out.println("Minimum Element is "+output[0]);
+          System.out.println("Maximum Element is "+output[1]);
+          
+     }
+     public static int[]  check(int temp[],int out[],int k){
+        if(k==temp.length){
+            return  out;
+        }
+      out[0]=Math.min(out[0],temp[k]);
+      out[1]=Math.max(out[1],temp[k]);      
+
+        return check(temp,out,++k);
+     }
+}
