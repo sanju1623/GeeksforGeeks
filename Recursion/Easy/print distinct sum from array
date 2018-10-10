@@ -1,0 +1,34 @@
+import java.util.*; 
+import java.lang.*; 
+
+// Itearate the loop and call recursion inside it and check the count
+
+
+public class HelloWorld{
+static HashSet<Integer>set=new HashSet<>();
+     public static void main(String []args){
+         int temp[]={2,3};
+sum(temp,0,3,0);
+	Iterator<Integer> i = set.iterator(); 
+	while(i.hasNext()){
+	    System.out.print(i.next()+" ");
+	}
+     }
+     
+     
+     
+     
+     public static void sum(int nums[],int count,int k,int p){
+         
+         if(count==k){
+             set.add(p);
+             return;
+         }
+         
+         
+         for(int i=0;i<nums.length;i++){
+             sum(nums,count+1,k,p+nums[i]);
+         }
+         
+     }
+}
