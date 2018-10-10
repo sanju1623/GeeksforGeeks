@@ -1,0 +1,25 @@
+import java.util.*; 
+import java.lang.*; 
+
+public class HelloWorld{
+     public static void main(String []args){
+           List<Integer>temp=new ArrayList<>();
+           generate("xyz","");
+     }
+     public static void generate(String a,String b){
+         
+         if(a.length()==0){
+             System.out.println(b);
+             return ;
+             
+         }
+         
+         generate(a.substring(1),b);
+         generate(a.substring(1),b+a.charAt(0));
+         
+         
+         
+     }
+     
+     
+}
