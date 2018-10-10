@@ -1,0 +1,30 @@
+import java.util.*; 
+import java.lang.*; 
+
+public class HelloWorld{
+     public static void main(String []args){
+           int k=3;
+           generate("","abc",k);
+     }
+     public static void generate(String a,String b,int k){
+    
+         if(a.length()==k){
+             System.out.println(a);
+         
+             return;
+         }
+         
+         
+         for(int i=0;i<b.length();i++){
+             String temp=a+b.charAt(i);
+             generate(temp,b,k);
+             
+             
+         }
+         
+         
+         
+     }
+     
+     
+}
