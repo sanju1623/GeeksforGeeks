@@ -1,0 +1,16 @@
+import java.util.*; 
+import java.lang.*; 
+
+public class HelloWorld{
+     public static void main(String []args){
+         System.out.println(reverse("","SANJAY"));
+    
+     }
+     public static String reverse(String first,String second){
+         if(second.length()==0){
+             return first;
+         }else
+         first=second.charAt(0)+first;
+         return reverse(first,second.substring(1));
+     }
+}
