@@ -1,0 +1,28 @@
+import java.util.*;
+//https://www.geeksforgeeks.org/maximize-array-elements-upto-given-number/
+// NO NEED OF FOR LOOP ONLY SINGLE TRAVERSE
+
+public class maximizeArray {
+    static int p;
+   public static void main(String args[]) {
+       int input[]={3,10,6,4,5};
+      List<Integer>out=new ArrayList<>();
+       generate(input,0,1,1,15);
+       System.out.println(p);   
+   }
+   public static void generate(int temp[],int index,int output
+   ,int min,int max){
+       
+      if( index== temp.length )
+      {
+          p=Math.max(p,output);
+          return ;
+      }      
+      
+      if(output-temp[index]>0)
+      generate(temp,index+1,output-temp[index],min,max) ;
+         if(output+temp[index]<=max)
+        generate(temp,index+1,output+temp[index],min,max);
+      
+   }
+}
